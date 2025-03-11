@@ -36,3 +36,41 @@
     transform: rotate(360deg);
   }
 }
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  display: inline;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+
+.post, .comment {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.post h3, .comment h3 {
+  margin-top: 0;
+}
+
+.comment p {
+  margin: 0.5rem 0;
+}

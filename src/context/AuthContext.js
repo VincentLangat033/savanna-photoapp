@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import { auth } from "../firebase";
-import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut,GoogleAuthProvider,createUserWithEmailAndPassword,signInWithPopup } from "firebase/auth";
 
 const AuthContext = createContext();
 
@@ -15,6 +15,16 @@ export const AuthProvider = ({ children }) => {
         });
         return () => unsubscribe();
     }, []);
+       // Email/Password Signup
+    const registerWithEmail = async (email, password) => {
+        await createUserWithEmailAndPassword(auth, email, password);
+    };
+
+    // Google Signup
+    const registerWithGoogle = async () => {
+        const provider = new GoogleAuthProvider();
+        await signInWithPopup(auth, provider);
+    };
 
     const login = async (email, password) => {
         await signInWithEmailAndPassword(auth, email, password);
@@ -25,7 +35,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, login, logout }}>
+        <AuthContext.Provider value={{ user,registerWithEmail, registerWithGoogle, login, logout }}>
             {children}
         </AuthContext.Provider>
     );
