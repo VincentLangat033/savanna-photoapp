@@ -9,6 +9,8 @@ import UserProfile from "./pages/UserProfile";
 import AlbumList from "./pages/AlbumList";
 import AlbumPhotos from "./pages/AlbumPhotos";
 import PostComments from "./pages/PostComments";
+import User from "./pages/User";
+import Photos from "./pages/Photos";
 
 function App() {
     return (
@@ -19,10 +21,12 @@ function App() {
                 <Route path="/register" element={<Register />} />
                 <Route path="/logout" element={<PrivateRoute><Logout /></PrivateRoute>} />
                 <Route path="/home" element={<PrivateRoute><Home /></PrivateRoute>} />
+                <Route path="/users" element={<PrivateRoute><User /></PrivateRoute>} />
                 <Route path="/users/:userId" element={<PrivateRoute><UserProfile /></PrivateRoute>} />
                 <Route path="/albums" element={<PrivateRoute><AlbumList /></PrivateRoute>} />
                 <Route path="/albums/:albumId/photos" element={<PrivateRoute><AlbumPhotos /></PrivateRoute>} />
                 <Route path="/posts/:postId/comments" element={<PrivateRoute><PostComments /></PrivateRoute>}/>
+                <Route path="/photos" element={<PrivateRoute><Photos /></PrivateRoute>}/>
             </Routes>
         </AuthProvider>
     );

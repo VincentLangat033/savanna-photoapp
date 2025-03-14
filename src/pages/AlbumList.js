@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import "../App.css"
+import { Link, useNavigate } from 'react-router-dom';
+import '../App.css';
 
 const AlbumList = () => {
   const [users, setUsers] = useState([]);
   const [selectedUserId, setSelectedUserId] = useState('');
   const [albums, setAlbums] = useState([]);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -40,19 +41,34 @@ const AlbumList = () => {
   }, [selectedUserId]);
 
   return (
-    <div>
-      <h1>Albums</h1>
-      <select onChange={(e) => setSelectedUserId(e.target.value)}>
-        <option value="">Select a user</option>
-        {users.map(user => (
-          <option key={user.id} value={user.id}>{user.name}</option>
-        ))}
-      </select>
+    <div className="album-list">
+      {/* Go Back Button */}
+      <button onClick={() => navigate(-1)} className="go-back-button">
+        Go Back
+      </button>
 
-      <ul>
+      <h1 className="page-title">Albums</h1>
+
+      {/* User Dropdown */}
+      <div className="user-dropdown">
+        <select
+          onChange={(e) => setSelectedUserId(e.target.value)}
+          className="dropdown"
+        >
+          <option value="">Select a user</option>
+          {users.map(user => (
+            <option key={user.id} value={user.id}>{user.name}</option>
+          ))}
+        </select>
+      </div>
+
+      {/* Album List */}
+      <ul className="album-grid">
         {albums.map(album => (
-          <li key={album.id}>
-            <Link to={`/albums/${album.id}/photos`}>{album.title}</Link>
+          <li key={album.id} className="album-card">
+            <Link to={`/albums/${album.id}/photos`} className="album-link">
+              {album.title}
+            </Link>
           </li>
         ))}
       </ul>

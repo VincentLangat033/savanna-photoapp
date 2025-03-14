@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import "../App.css"
+import { useParams, useNavigate } from 'react-router-dom';
+import '../App.css';
 
 const AlbumPhotos = () => {
   const { albumId } = useParams();
   const [photos, setPhotos] = useState([]);
+  const navigate = useNavigate(); // Hook for navigation
 
   useEffect(() => {
     const fetchPhotos = async () => {
@@ -22,16 +23,21 @@ const AlbumPhotos = () => {
   }, [albumId]);
 
   return (
-    <div>
-      <h1>Photos</h1>
-      <ul>
+    <div className="album-photos">
+      {/* Go Back Button */}
+      <button onClick={() => navigate(-1)} className="go-back-button">
+        Go Back
+      </button>
+
+      <h1 className="page-title">Photos</h1>
+      <div className="photo-grid">
         {photos.map(photo => (
-          <li key={photo.id}>
-            <img src={photo.thumbnailUrl} alt={photo.title} />
-            <p>{photo.title}</p>
-          </li>
+          <div key={photo.id} className="photo-card">
+            <img src={photo.url} alt={photo.title} className="photo-image" />
+            <p className="photo-title">{photo.title}</p>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };
