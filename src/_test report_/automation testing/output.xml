@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.9 on win32)" generated="2025-03-14T15:41:15.289674" rpa="false" schemaversion="5">
-<suite id="s1" name="Login Tests" source="C:\Users\A\Desktop\savanna informatics\savannah-qa-assessment\src\_test report_\automation testing\tests\login_tests.robot">
-<test id="s1-t1" name="Successful Login" line="10">
+<robot generator="Robot 7.2.2 (Python 3.12.9 on win32)" generated="2025-03-14T16:52:39.369065" rpa="false" schemaversion="5">
+<suite id="s1" name="Login And Search Tests" source="C:\Users\A\Desktop\savanna informatics\savannah-qa-assessment\src\_test report_\automation testing\tests\login_and_search_tests.robot">
+<test id="s1-t1" name="Successful Login and Perform a Search" line="12">
 <kw name="Open Application" owner="common">
 <kw name="Open Browser" owner="Browser">
-<msg time="2025-03-14T15:41:15.922688" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
-<msg time="2025-03-14T15:41:15.923699" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\A\\Desktop\\savanna informatics\\savannah-qa-assessment\\src\\_test report_\\automation testing\\browser\\traces\\temp\\fe1c40da-39f2-4aaf-8acb-69b6631febf8"}</msg>
-<msg time="2025-03-14T15:41:16.009286" level="INFO">Starting Browser process C:\Users\A\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js using port 51168</msg>
-<msg time="2025-03-14T15:41:16.009286" level="INFO">Node startup parameters: ['node', 'C:\\Users\\A\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\Browser\\wrapper\\index.js', '51168']</msg>
-<msg time="2025-03-14T15:41:20.102846" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\A\\Desktop\\savanna informatics\\savannah-qa-assessment\\src\\_test report_\\automation testing\\browser\\traces\\temp\\fe1c40da-39f2-4aaf-8acb-69b6631febf8"}</msg>
-<msg time="2025-03-14T15:41:20.110387" level="INFO">{
+<msg time="2025-03-14T16:52:40.507283" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-03-14T16:52:40.521557" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\A\\Desktop\\savanna informatics\\savannah-qa-assessment\\src\\_test report_\\automation testing\\browser\\traces\\temp\\6374b721-719c-431d-a29a-35a4af27292c"}</msg>
+<msg time="2025-03-14T16:52:40.745410" level="INFO">Starting Browser process C:\Users\A\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js using port 55785</msg>
+<msg time="2025-03-14T16:52:40.749474" level="INFO">Node startup parameters: ['node', 'C:\\Users\\A\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\Browser\\wrapper\\index.js', '55785']</msg>
+<msg time="2025-03-14T16:52:47.416245" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\A\\Desktop\\savanna informatics\\savannah-qa-assessment\\src\\_test report_\\automation testing\\browser\\traces\\temp\\6374b721-719c-431d-a29a-35a4af27292c"}</msg>
+<msg time="2025-03-14T16:52:47.420272" level="INFO">{
   "acceptDownloads": true,
   "bypassCSP": true,
   "forcedColors": "none",
@@ -19,73 +19,141 @@
   "reducedMotion": "no-preference",
   "serviceWorkers": "allow",
   "viewport": {
-    "width": 1280,
-    "height": 720
+    "height": 720,
+    "width": 1280
   }
 }</msg>
-<msg time="2025-03-14T15:41:20.221505" level="INFO">Successfully created context. </msg>
-<msg time="2025-03-14T15:41:20.221505" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
-<msg time="2025-03-14T15:41:26.343636" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg time="2025-03-14T15:41:26.343636" level="INFO">See also file:///C:/Users/A/Desktop/savanna%20informatics/savannah-qa-assessment/src/_test%20report_/automation%20testing/playwright-log.txt for additional details.</msg>
-<msg time="2025-03-14T15:41:26.346636" level="FAIL">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
-Call log:
-  - navigating to "http://localhost:3001/login", waiting until "load"
-</msg>
+<msg time="2025-03-14T16:52:47.479567" level="INFO">Successfully created context. </msg>
+<msg time="2025-03-14T16:52:47.479567" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'height': 720, 'width': 1280}}</msg>
+<msg time="2025-03-14T16:52:50.815693" level="INFO">Successfully initialized new page object and opened url: http://localhost:3000/login</msg>
 <arg>${url}</arg>
 <arg>chromium</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
-<status status="FAIL" start="2025-03-14T15:41:15.920172" elapsed="10.454712">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
-Call log:
-  - navigating to "http://localhost:3001/login", waiting until "load"
-</status>
+<status status="PASS" start="2025-03-14T16:52:40.501197" elapsed="10.314496"/>
 </kw>
 <arg>${URL}</arg>
-<status status="FAIL" start="2025-03-14T15:41:15.919171" elapsed="10.457227">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
-Call log:
-  - navigating to "http://localhost:3001/login", waiting until "load"
-</status>
+<status status="PASS" start="2025-03-14T16:52:40.487343" elapsed="10.330880"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>10</arg>
+<msg time="2025-03-14T16:52:53.825773" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-03-14T15:41:26.409194" elapsed="0.001005"/>
+<status status="PASS" start="2025-03-14T16:52:50.824222" elapsed="3.002088"/>
 </kw>
 <kw name="Login">
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-03-14T16:52:53.832363" level="INFO">Fills the text 'kim@test3.com' in the given field.</msg>
+<arg>id=email</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-14T16:52:53.830351" elapsed="0.180620"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-03-14T16:52:54.014858" level="INFO">Fills the text '123456' in the given field.</msg>
+<arg>id=password</arg>
+<arg>${password}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-14T16:52:54.011566" elapsed="0.078002"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-14T16:52:54.092071" level="INFO">Clicks the element 'id=login-button'.</msg>
+<arg>id=login-button</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-14T16:52:54.090582" elapsed="0.165418"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-14T16:52:59.257500" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-14T16:52:54.257002" elapsed="5.000498"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-03-14T16:52:59.268292" level="INFO">Waited for Element with selector id=view-users at state visible</msg>
+<arg>id=view-users</arg>
+<arg>visible</arg>
+<arg>10s</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-03-14T16:52:59.257500" elapsed="0.010792"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-14T16:52:59.268292" level="INFO">Clicks the element 'id=view-users'.</msg>
+<arg>id=view-users</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-14T16:52:59.268292" elapsed="0.092160"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-14T16:53:04.363285" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-14T16:52:59.361989" elapsed="5.001296"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-03-14T16:53:04.363821" level="INFO">Fills the text 'Ervin Howell' in the given field.</msg>
+<arg>id=search-users</arg>
+<arg>${SEARCH_TERM}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-03-14T16:53:04.363821" elapsed="0.033990"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-14T16:53:09.401499" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-14T16:53:04.399802" elapsed="5.001697"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-03-14T16:53:09.403514" level="INFO">Clicks the element 'id=search-btn'.</msg>
+<arg>id=search-btn</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-03-14T16:53:09.401499" elapsed="0.065297"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-03-14T16:53:14.468260" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-03-14T16:53:09.466796" elapsed="5.001464"/>
+</kw>
 <arg>${EMAIL}</arg>
 <arg>${PASSWORD}</arg>
-<status status="NOT RUN" start="2025-03-14T15:41:26.414731" elapsed="0.001006"/>
+<status status="PASS" start="2025-03-14T16:52:53.828337" elapsed="20.639923"/>
 </kw>
 <kw name="Close Browser" owner="Browser">
+<msg time="2025-03-14T16:53:16.079556" level="INFO">Closed browser</msg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-03-14T15:41:26.554594" elapsed="0.001058"/>
+<status status="PASS" start="2025-03-14T16:53:14.468260" elapsed="1.612297"/>
 </kw>
-<msg time="2025-03-14T15:41:26.685629" level="INFO">Set timeout to: 10000</msg>
-<msg time="2025-03-14T15:41:26.763483" level="INFO">Switching context to context=d6ebb46b-8b29-41ae-b848-df0286e75182 in CURRENT</msg>
-<msg time="2025-03-14T15:41:26.806461" level="INFO">Successfully changed active context: context=d6ebb46b-8b29-41ae-b848-df0286e75182</msg>
-<msg time="2025-03-14T15:41:26.912540" level="INFO">Successfully closed Context</msg>
-<status status="FAIL" start="2025-03-14T15:41:15.916646" elapsed="10.744758">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
-Call log:
-  - navigating to "http://localhost:3001/login", waiting until "load"
-</status>
+<status status="PASS" start="2025-03-14T16:52:40.453196" elapsed="35.635707"/>
 </test>
-<status status="FAIL" start="2025-03-14T15:41:15.297212" elapsed="11.635579"/>
+<status status="PASS" start="2025-03-14T16:52:39.375487" elapsed="36.813911"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Login Tests" id="s1" pass="0" fail="1" skip="0">Login Tests</stat>
+<stat name="Login And Search Tests" id="s1" pass="1" fail="0" skip="0">Login And Search Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-03-14T15:41:15.922688" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-03-14T16:52:40.507283" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>

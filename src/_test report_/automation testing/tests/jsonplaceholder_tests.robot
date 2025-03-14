@@ -1,6 +1,8 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
+Library    Browser
+Resource    ../resources/common.robot
 
 *** Variables ***
 ${BASE_URL}    https://jsonplaceholder.typicode.com
@@ -8,6 +10,7 @@ ${BASE_URL}    https://jsonplaceholder.typicode.com
 *** Test Cases ***
 Get All Posts
     [Documentation]    Fetch all posts and verify the response.
+    Open Application    ${BASE_URL}
     ${response}=    GET    ${BASE_URL}/posts
     Should Be Equal As Numbers    ${response.status_code}    200
     ${posts}=    Set Variable    ${response.json()}

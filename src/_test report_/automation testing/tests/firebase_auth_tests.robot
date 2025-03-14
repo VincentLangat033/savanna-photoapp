@@ -3,7 +3,7 @@ Library    RequestsLibrary
 Library    Collections
 
 *** Variables ***
-${FIREBASE_API_KEY}    YOUR_FIREBASE_API_KEY
+${FIREBASE_API_KEY}    AIzaSyBzD3EA69zkcYqiix_fumPLN9KC5qIZE1Q
 ${FIREBASE_AUTH_URL}    https://identitytoolkit.googleapis.com/v1/accounts
 
 *** Test Cases ***
