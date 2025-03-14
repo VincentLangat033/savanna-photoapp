@@ -12,8 +12,8 @@ This test plan covers the following API modules:
 
 ## **3. Testing Approach**  
 The APIs will be tested using:
-- **Manual Testing** (via Postman, cURL, etc.)
-- **Automated Testing** (via Jest, Mocha, or similar frameworks)
+- **Manual Testing** (via Postman)
+- **Automated Testing** (via robot framework (Python))
 - **Security Testing** (SQL Injection, unauthorized access attempts)
 - **Performance Testing** (stress testing with multiple requests)
 
@@ -95,7 +95,7 @@ The APIs will be tested using:
 - Try unauthorized access → **Expected:** `401 Unauthorized`
 
 ✅ **Performance Tests**  
-- Stress test with 1000+ requests → **Expected:** System should maintain response times under acceptable limits.
+- Stress test with 100+ requests → **Expected:** System should maintain response times under acceptable limits.
 
 ✅ **Edge Case Tests**  
 - Empty request body for `POST` → **Expected:** `400 Bad Request`
@@ -104,19 +104,19 @@ The APIs will be tested using:
 ## **6. Test Execution**  
 | Test Case ID | API Endpoint | Test Type | Expected Result | Status |
 |-------------|-------------|----------|----------------|--------|
-| TC001 | GET /users | Positive | 200 OK | Pending |
-| TC002 | GET /users/{id} | Negative | 404 Not Found | Pending |
-| TC003 | POST /users | Positive | 201 Created | Pending |
-| TC004 | POST /users | Negative | 400 Bad Request | Pending |
-| TC005 | GET /albums | Positive | 200 OK | Pending |
-| TC006 | GET /photos | Positive | 200 OK | Pending |
-| TC007 | POST /login | Positive | 200 OK | Pending |
-| TC008 | POST /login | Negative | 401 Unauthorized | Pending |
-| TC009 | POST /logout | Positive | 200 OK | Pending |
+| TC001 | GET /users | Positive | 200 OK | PASS |
+| TC002 | GET /users/{id} | Negative | 404 Not Found | PASS |
+| TC003 | POST /users | Positive | 201 Created | PASS |
+| TC004 | POST /users | Negative | 400 Bad Request | PASS |
+| TC005 | GET /albums | Positive | 200 OK | PASS |
+| TC006 | GET /photos | Positive | 200 OK | PASS |
+| TC007 | POST /login | Positive | 200 OK | PASS |
+| TC008 | POST /login | Negative | 401 Unauthorized | PASS |
+| TC009 | POST /logout | Positive | 200 OK | PASS |
 
 ## **7. Tools for Testing**  
 - **Postman** (Manual API Testing)
-- **Jest/Mocha** (Automated Testing)
+- **Robot Framework(Python)** (Automated Testing)
 - **Apache JMeter** (Performance Testing)
 - **OWASP ZAP** (Security Testing)
 

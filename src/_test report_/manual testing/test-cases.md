@@ -83,46 +83,35 @@ This document outlines the test plan for the Savannah QA web application. The ap
 #### **Authentication**
 | Test Case ID | Test Case Description          | Preconditions    | Test Steps | Expected Result | Actual Result | Status |
 |-------------|-------------------------------|-----------------|------------|----------------|---------------|--------|
-| TC-AUTH-01  | Verify successful login       | User is registered | 1. Navigate to login page.<br>2. Enter valid credentials.<br>3. Click "Login". | User is redirected to home page | | |
-| TC-AUTH-02  | Verify logout functionality   | User is logged in  | 1. Click "Logout" button. | User is redirected to login page | | |
+| TC-AUTH-01  | Verify successful login       | User is registered | 1. Navigate to login page.<br>2. Enter valid credentials.<br>3. Click "Login". | User is redirected to home page |PASS |PASS|
+| TC-AUTH-02  | Verify logout functionality   | User is logged in  | 1. Click "Logout" button. | User is redirected to login page |PASS |PASS |
+| TC-AUTH-03  | Verify session persistence on refresh | User is logged in | 1. Navigate to home page.<br>2. Refresh the browser. | User remains logged in | FAIL | FAIL |
+
+**Bug Report:** [Session Persistence Issue](bug-report.md)
 
 #### **User Profile**
 | Test Case ID | Test Case Description         | Preconditions   | Test Steps | Expected Result | Actual Result | Status |
 |-------------|------------------------------|---------------|------------|----------------|---------------|--------|
-| TC-UP-01    | Verify user details displayed | User is logged in | 1. Navigate to user profile page. | User details (name, email, etc.) are displayed correctly | | |
-| TC-UP-02    | Verify posts linked to user   | User has posts | 1. Navigate to user profile page.<br>2. Click on a post. | Post details are displayed correctly | | |
+| TC-UP-01    | Verify user details displayed | User is logged in | 1. Navigate to user profile page. | User details (name, email, etc.) are displayed correctly |PASS |PASS|
+| TC-UP-02    | Verify posts linked to user   | User has posts | 1. Navigate to user profile page.<br>2. Click on a post. | Post details are displayed correctly |PASS |PASS |
 
 #### **Albums and Photos**
 | Test Case ID | Test Case Description        | Preconditions  | Test Steps | Expected Result | Actual Result | Status |
 |-------------|-----------------------------|--------------|------------|----------------|---------------|--------|
-| TC-ALB-01   | Verify albums are displayed  | User has albums | 1. Navigate to albums page.<br>2. Select a user. | Albums for the selected user are displayed | | |
-| TC-ALB-02   | Verify photos are displayed  | Album has photos | 1. Navigate to albums page.<br>2. Select an album. | Photos for the selected album are displayed | | |
+| TC-ALB-01   | Verify albums are displayed  | User has albums | 1. Navigate to albums page.<br>2. Select a user. | Albums for the selected user are displayed |PASS |PASS |
+| TC-ALB-02   | Verify photos are displayed  | Album has photos | 1. Navigate to albums page.<br>2. Select an album. | Photos for the selected album are displayed |PASS |PASS |
 
 #### **Posts and Comments**
 | Test Case ID | Test Case Description       | Preconditions  | Test Steps | Expected Result | Actual Result | Status |
 |-------------|----------------------------|--------------|------------|----------------|---------------|--------|
-| TC-POST-01  | Verify posts are displayed | User has posts | 1. Navigate to posts page.<br>2. Select a user. | Posts for the selected user are displayed | | |
-| TC-POST-02  | Verify comments are displayed | Post has comments | 1. Navigate to posts page.<br>2. Click on a post. | Comments for the selected post are displayed | | |
+| TC-POST-01  | Verify posts are displayed | User has posts | 1. Navigate to posts page.<br>2. Select a user. | Posts for the selected user are displayed |PASS | PASS|
+| TC-POST-02  | Verify comments are displayed | Post has comments | 1. Navigate to posts page.<br>2. Click on a post. | Comments for the selected post are displayed |PASS | PASS|
 
 #### **Navigation**
 | Test Case ID | Test Case Description          | Preconditions  | Test Steps | Expected Result | Actual Result | Status |
 |-------------|------------------------------|--------------|------------|----------------|---------------|--------|
-| TC-NAV-01   | Verify "Go Back" button functionality | User is on a sub-page | 1. Click "Go Back" button. | User is redirected to the previous page | | |
-| TC-NAV-02   | Verify all links work        | User is logged in | 1. Click on all navigation links. | User is redirected to the correct pages | | |
-
----
-
-## **Excel-Compatible Test Cases**
-
-Below is the same test case data in a format suitable for Excel upload:
-
-```plaintext
-Test Case ID, Test Case Description, Preconditions, Test Steps, Expected Result, Actual Result, Status
-TC-AUTH-01, Verify successful login, User is registered, 1. Navigate to login page. 2. Enter valid credentials. 3. Click "Login"., User is redirected to home page, ,
-TC-AUTH-02, Verify logout functionality, User is logged in, 1. Click "Logout" button., User is redirected to login page, ,
-TC-UP-01, Verify user details displayed, User is logged in, 1. Navigate to user profile page., User details (name, email, etc.) are displayed correctly, ,
-TC-UP-02, Verify posts linked to user, User has posts, 1. Navigate to user profile page. 2. Click on a post., Post details are displayed correctly, ,
-```
+| TC-NAV-01   | Verify "Go Back" button functionality | User is on a sub-page | 1. Click "Go Back" button. | User is redirected to the previous page |PASS |PASS |
+| TC-NAV-02   | Verify all links work        | User is logged in | 1. Click on all navigation links. | User is redirected to the correct pages |PASS |PASS |
 
 ---
 

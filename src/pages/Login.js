@@ -118,6 +118,7 @@ const Login = () => {
                             type="submit"
                             fullWidth
                             variant="contained"
+                            id="login-button"
                             sx={{
                                 fontSize: '1rem',
                                 padding: '7px',

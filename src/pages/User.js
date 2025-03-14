@@ -131,12 +131,13 @@ const User = () => {
         <div className="search-bar">
           <input
             type="text"
+            id="search-users"
             placeholder="Search by name, username, id, email, or website"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"
           />
-          <button onClick={handleSearch} className="search-button">
+          <button onClick={handleSearch} className="search-button" id="search-btn">
             Search
           </button>
         </div>
@@ -160,7 +161,7 @@ const User = () => {
                 <td>{user.email}</td>
                 <td>{user.website}</td>
                 <td>
-                  <Link to={`/users/${user.id}`} className="view-more-button">
+                  <Link to={`/users/${user.id}`} className="view-more-button" id="view-more-btn">
                     View More
                   </Link>
                 </td>
