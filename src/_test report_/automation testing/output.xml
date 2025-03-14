@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.9 on win32)" generated="2025-03-14T15:41:15.289674" rpa="false" schemaversion="5">
+<suite id="s1" name="Login Tests" source="C:\Users\A\Desktop\savanna informatics\savannah-qa-assessment\src\_test report_\automation testing\tests\login_tests.robot">
+<test id="s1-t1" name="Successful Login" line="10">
+<kw name="Open Application" owner="common">
+<kw name="Open Browser" owner="Browser">
+<msg time="2025-03-14T15:41:15.922688" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-03-14T15:41:15.923699" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\A\\Desktop\\savanna informatics\\savannah-qa-assessment\\src\\_test report_\\automation testing\\browser\\traces\\temp\\fe1c40da-39f2-4aaf-8acb-69b6631febf8"}</msg>
+<msg time="2025-03-14T15:41:16.009286" level="INFO">Starting Browser process C:\Users\A\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\LocalCache\local-packages\Python312\site-packages\Browser\wrapper\index.js using port 51168</msg>
+<msg time="2025-03-14T15:41:16.009286" level="INFO">Node startup parameters: ['node', 'C:\\Users\\A\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.12_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python312\\site-packages\\Browser\\wrapper\\index.js', '51168']</msg>
+<msg time="2025-03-14T15:41:20.102846" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\A\\Desktop\\savanna informatics\\savannah-qa-assessment\\src\\_test report_\\automation testing\\browser\\traces\\temp\\fe1c40da-39f2-4aaf-8acb-69b6631febf8"}</msg>
+<msg time="2025-03-14T15:41:20.110387" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": true,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-03-14T15:41:20.221505" level="INFO">Successfully created context. </msg>
+<msg time="2025-03-14T15:41:20.221505" level="INFO">{'acceptDownloads': True, 'bypassCSP': True, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<msg time="2025-03-14T15:41:26.343636" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-03-14T15:41:26.343636" level="INFO">See also file:///C:/Users/A/Desktop/savanna%20informatics/savannah-qa-assessment/src/_test%20report_/automation%20testing/playwright-log.txt for additional details.</msg>
+<msg time="2025-03-14T15:41:26.346636" level="FAIL">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
+Call log:
+  - navigating to "http://localhost:3001/login", waiting until "load"
+</msg>
+<arg>${url}</arg>
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="FAIL" start="2025-03-14T15:41:15.920172" elapsed="10.454712">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
+Call log:
+  - navigating to "http://localhost:3001/login", waiting until "load"
+</status>
+</kw>
+<arg>${URL}</arg>
+<status status="FAIL" start="2025-03-14T15:41:15.919171" elapsed="10.457227">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
+Call log:
+  - navigating to "http://localhost:3001/login", waiting until "load"
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-03-14T15:41:26.409194" elapsed="0.001005"/>
+</kw>
+<kw name="Login">
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2025-03-14T15:41:26.414731" elapsed="0.001006"/>
+</kw>
+<kw name="Close Browser" owner="Browser">
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-03-14T15:41:26.554594" elapsed="0.001058"/>
+</kw>
+<msg time="2025-03-14T15:41:26.685629" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-03-14T15:41:26.763483" level="INFO">Switching context to context=d6ebb46b-8b29-41ae-b848-df0286e75182 in CURRENT</msg>
+<msg time="2025-03-14T15:41:26.806461" level="INFO">Successfully changed active context: context=d6ebb46b-8b29-41ae-b848-df0286e75182</msg>
+<msg time="2025-03-14T15:41:26.912540" level="INFO">Successfully closed Context</msg>
+<status status="FAIL" start="2025-03-14T15:41:15.916646" elapsed="10.744758">Error: page.goto: net::ERR_CONNECTION_REFUSED at http://localhost:3001/login
+Call log:
+  - navigating to "http://localhost:3001/login", waiting until "load"
+</status>
+</test>
+<status status="FAIL" start="2025-03-14T15:41:15.297212" elapsed="11.635579"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Login Tests" id="s1" pass="0" fail="1" skip="0">Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-03-14T15:41:15.922688" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+</errors>
+</robot>
