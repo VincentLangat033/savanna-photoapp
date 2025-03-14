@@ -11,6 +11,7 @@
 - [Setup Instructions](#setup-instructions)
 - [Learn More](#learn-more)
 
+
 ## Live Project
 Savanna PhotoApp is a React-based web application for managing and sharing photos seamlessly. The live project is hosted and accessible at:
 
@@ -36,10 +37,13 @@ Removes single build dependency and copies config files to your project.
 ## Running Tests
 
 The `__test_report__` folder under `src` contains different types of tests. You can access them here:
-
+### Manual Testing
 - [Manual Testing](src/_test%20report_/manual%20testing/test-cases.md) 
+### Automation Testing
 - [Automation Testing](src/_test%20report_/automation%20testing/README.md)
+### API Testing
 - [API Testing](src/_test%20report_/api%20testing/test-cases.md)
+### Performance Testing
 - [Performance Testing](src/_test%20report_/performance%20testing/test-plan.md)
 
 ## Setup Instructions
